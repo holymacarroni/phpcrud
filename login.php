@@ -5,6 +5,9 @@ require_once("classes/database.php");
 $con= new database();
 
 session_start();
+if(isset($_SESSION['username'])) {
+  header('location: index.php');
+} 
 // if (empty($_SESSION["username"])) {
 //   header("location: LOGIN.php");
 // }    
