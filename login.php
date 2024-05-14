@@ -3,6 +3,11 @@
 require_once("classes/database.php");
  
 $con= new database();
+
+session_start();
+// if (empty($_SESSION["username"])) {
+//   header("location: LOGIN.php");
+// }    
  
 if(isset($_POST['login'])){
   $username=$_POST['username'];
@@ -59,7 +64,7 @@ else{
         <div class="col">
            <input value="login" name="login" type='submit' class="btn btn-primary btn-block"></div>
         <div class="col">
-          <a href="signup.php" class="btn btn-danger btn-block">Sign Up</a>
+          <a href="multisave.php" class="btn btn-danger btn-block">Sign Up</a>
 
           <!-- Delete Button -->
           
